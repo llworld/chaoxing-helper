@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baomidou.dao.mapper.HeplerStudentHealthDailyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.baomidou.dao.entity.HeplerStudentHealthDaily">
+        <id column="id" property="id" />
+        <result column="uid" property="uid" />
+        <result column="user_name" property="userName" />
+        <result column="sno" property="sno" />
+        <result column="phone_number" property="phoneNumber" />
+        <result column="institute" property="institute" />
+        <result column="class_room" property="classRoom" />
+        <result column="Id_card" property="idCard" />
+        <result column="family_location" property="familyLocation" />
+        <result column="temperature" property="temperature" />
+        <result column="is_gone_hubei" property="isGoneHubei" />
+        <result column="is_touch_patient" property="isTouchPatient" />
+        <result column="student_health" property="studentHealth" />
+        <result column="family_health" property="familyHealth" />
+        <result column="emergency_contact" property="emergencyContact" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uid, user_name, sno, phone_number, institute, class_room, Id_card, family_location, temperature, is_gone_hubei, is_touch_patient, student_health, family_health, emergency_contact
+    </sql>
+
+</mapper>

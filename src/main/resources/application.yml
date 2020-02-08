@@ -1,0 +1,34 @@
+
+spring:
+  profiles:
+    active: @environment@
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      maxOpenPreparedStatements: 20
+      #WebStatFilter配置，说明请参考Druid Wiki，配置_配置WebStatFilter
+      web-stat-filter:
+        enabled: true #是否启用StatFilter默认值true
+        url-pattern: /*
+        exclusions: /druid/*,*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico
+        session-stat-enable: true
+        session-stat-max-count: 10
+      #StatViewServlet配置，说明请参考Druid Wiki，配置_StatViewServlet配置
+      stat-view-servlet:
+        enabled: true #是否启用StatViewServlet默认值trues
+        url-pattern: /druid/*
+        reset-enable: true
+        login-username: admin
+        login-password: admin
+        # 黑名单无
+        deny:
+        # 如果allow没有配置或者为空，则允许所有访问，deny优先于allow，消除 "Sorry, you are not permitted to view this page."
+        allow:
+mybatis:
+  # 指定全局配置文件位置
+  #  config-location:  lasspath:mybatis/mybatis-config.xml
+  # 指定sql映射文件位置
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  # config-Location 与configuration作用相同，用于全局设置mybatis，两个只能留一个
+  configuration:
+    map-underscore-to-camel-case: true

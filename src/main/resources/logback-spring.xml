@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <springProperty scope="context" name="logging.path" source="logging.file.path"/>
+    <springProfile name="prod">
+        <include resource="logback/logback-prod.xml" />
+    </springProfile>
+    <springProfile name="dev">
+        <include resource="logback/logback-dev.xml" />
+    </springProfile>
+    <springProfile name="test">
+        <include resource="logback/logback-test.xml" />
+    </springProfile>
+
+</configuration>

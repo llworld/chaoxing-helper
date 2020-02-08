@@ -1,0 +1,10 @@
+server:
+  port: 8088
+spring:
+  profiles: dev
+  datasource:
+      # 数据源基本配置
+      url: jdbc:mysql://127.0.0.1:3306/chaoxing_helper?serverTimezone=UTC&useSSL=false&autoReconnect=true&tinyInt1isBit=false&useUnicode=true&characterEncoding=utf8
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
